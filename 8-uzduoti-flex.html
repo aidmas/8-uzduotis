@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>"Blok div"</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #konteineris {
+            margin: 10px;
+            height: 95vmin;
+            width: 80vmin;
+        }
+
+        #konteineris, #c01, #c02{ flex-direction:column; }
+        #antraste, #centras{ flex-direction: row; }       
+        #konteineris, #antraste, #centras, #poraste, #c01, #c02{ display: flex; }
+        #centras { flex-grow: 1; }
+        #a, #b, #c, #d, #e, #f, #g, #h, #i{ overflow: auto; }
+        #a, #b { background-color: green; }
+        #d, #e, #g{ background-color: blue; }
+        #f, #h{ background: red; }
+        #c{ background-color: yellow; flex: 0 1 20%; }
+        #poraste { background-color: turquoise; }       
+        #a, #c, #c01{ margin-right: 10px; }
+        #antraste, #centras, #d, #e, #f{ margin-bottom: 10px; }
+
+        #antraste, #poraste, #d, #e { flex: 0 0 4em; }
+        #b { flex: 0 1 25%; }
+        #c01{ flex: 1 1 55%; }
+        #c02{ flex: 0 1 25%; }
+        #a{ flex:1 1 75%;}
+        #g, #h{ flex: 1 1 auto; }
+        #f{ flex: 0 0 calc(8em + 10px); }
+        
+    </style>
+</head>
+
+<body>
+    <div id="konteineris">
+        <div id="antraste">
+            <div id="a">A</div>
+            <div id="b">B</div>
+        </div>
+        <div id="centras">
+            <div id="c">C</div>
+            <div id="c01">
+                    <div id="d">D</div>
+                    <div id="e">E</div>
+                    <div id="g">G</div>
+                </div>
+            <div id="c02">
+                    <div id="f">F</div>
+                    <div id="h">H</div>
+                </div>
+        </div>
+        <div id="poraste">I</div>
+    </div>
+</body>
+
+</html>
